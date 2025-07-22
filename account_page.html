@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laptop Store | Sales | Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">    
+        <div class="navbar">
+            <div class="logo">
+                 <img src="../LAPTOP WEBSITE/img/logo.png" width="200px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="offer_page.html">OFFERS</a></li>
+                    <li><a href="about_page.html">ABOUT</a></li>
+                    <li><a href="account_page.html">ACCOUNT</a></li>
+                </ul>
+            </nav>
+            <img src="img/laptop-solid.svg" height="30px" width="30px">
+        </div>
+    </div>
+
+    <!--------account_page-------->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">LOGIN</span>
+                            <span onclick="register()">REGISTER</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginform">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <h4><a href="">Forget Password</a></h4>
+                        </form>
+
+                        <form id="regform">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--------js for toggle form-------->
+
+
+    <script>
+        var loginform = document.getElementById("loginform");
+        var regform = document.getElementById("regform");
+        var indicator = document.getElementById("indicator");
+
+         function register(){
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+         } 
+         
+         function login(){
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+         } 
+    </script>
+
+
+</body>
+</html>
